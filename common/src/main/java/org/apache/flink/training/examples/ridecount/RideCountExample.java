@@ -68,5 +68,7 @@ public class RideCountExample {
 
 		// run the cleansing pipeline
 		env.execute("Ride Count");
+
+
 	}
 }
