@@ -18,6 +18,7 @@
 
 package org.apache.flink.training.exercises.common.utils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -25,7 +26,7 @@ import java.util.Random;
 /**
  * GeoUtils provides utility methods to deal with locations for the data streaming exercises.
  */
-public class GeoUtils {
+public class GeoUtils implements Serializable {
 
 	// geo boundaries of the area of NYC
 	public static final double LON_EAST = -73.7;
