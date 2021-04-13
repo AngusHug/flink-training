@@ -20,11 +20,10 @@ public class Exercise06Aggregations {
         DataStream<Tuple3<String, String, Float>> stream = source.flatMap(new Split());
         DataStream<Tuple3<String, String, Float>> min = stream.keyBy(1).min(2);
         DataStream<Tuple3<String, String, Float>> minBy = stream.keyBy(1).minBy(2);
-        DataStream<Tuple3<String, String, Float>> sum = stream.keyBy(0,1).min(2);
-        DataStream<Tuple3<String, String, Float>> sumBy = stream.keyBy(0,1).min(2);
+        DataStream<Tuple3<String, String, Float>> sum = stream.keyBy(1).sum(2);
 //        min.print();
-        minBy.print();
-//        sum.print();
+//        minBy.print();
+        sum.print();
 //        sumBy.print();
         env.execute("MinOrMax");
     }
