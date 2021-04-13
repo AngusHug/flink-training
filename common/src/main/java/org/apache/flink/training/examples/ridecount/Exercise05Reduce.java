@@ -19,7 +19,7 @@ import java.time.Duration;
  * reduce: work on keyed data stream. conmbines the current element with the last reduced value
  *          and emits the new value. like recursion algorithms.
  */
-public class Exercises05Reduce {
+public class Exercise05Reduce {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStream<TaxiRide> source = env.addSource(new TaxiRideGenerator());
