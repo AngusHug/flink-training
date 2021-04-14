@@ -26,3 +26,19 @@
             other col's value is random
         * minBy/maxBy/sumBy:return the minum value in this file
             (mean at the same line with minum value replace current line data.example [湖南])
+6. process、processWindowFunction:
+    * window:a window is created as soon as the first elem should belong to this window arrives.
+                the window completely removed when the taime passes its end timestamp plus the user
+                specifyed allowed lateness.
+        a:each window have a trigger and a function attached to it.
+            * the function will contain the computation to by applied to the contents of the window
+            * the trigger specifies the conditions under which the window is considered ready for the 
+                function to be appapplied.
+            * use window:
+                a:specify whether stream should be keyed or not(have to be done befor defining the window)
+                b:if use keyBy:is split stream into logical keyed streams
+                c:after specify keyed, we should define a window assigner.the window defines how elem are
+                    assigned to windows.
+                
+    * ProcessWindowFunction:
+        * how to define and create window???
